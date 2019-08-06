@@ -1,15 +1,21 @@
-//
-//  main.cpp
-//  reverse_digits
-//
-//  Created by Sergio campos on 8/6/19.
-//  Copyright © 2019 Sergio campos. All rights reserved.
-//
-
 #include <iostream>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main()
+{
+    cout << "Enter a positive integer: " << endl;
+    int n;
+    cin >> n;
+    
+    // TODO: Print the digits of n in reverse
+    while (n > 0)
+    {
+        int digit = n % 10;
+        cout << digit;
+        n = n / 10;
+    }
+    
+    cout << endl;
+    
     return 0;
 }
