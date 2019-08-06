@@ -3,18 +3,36 @@ using namespace std;
 
 int main()
 {
-    cout << "Enter a positive integer: " << endl;
+    cout << "Enter an integer: " << endl;
     int n;
     cin >> n;
+    int digit;
     
     // TODO: Print the digits of n in reverse
-    while (n > 0)
+    if (n < 0)
     {
-        int digit = n % 10;
-        cout << digit;
-        n = n / 10;
+        while (n != 0)
+        {
+            digit = n % 10;
+            digit *= -1;
+            cout << digit;
+            n = n / 10;
+        }
+        cout << "-";
     }
-    
+    else if (n > 0)
+    {
+        while (n != 0)
+        {
+            digit = n % 10;
+            cout << digit;
+            n = n / 10;
+        }
+    }
+    else
+    {
+        cout << 0;
+    }
     cout << endl;
     
     return 0;
